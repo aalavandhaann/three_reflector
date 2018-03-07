@@ -6,8 +6,8 @@
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
 
-    <script src="./GroundSceneReflector.js"></script>
-    <script src="./aframe-mirror.js"></script>
+    <script src="../src/GroundSceneReflector.js"></script>
+    <script src="../src/aframe-mirror.js"></script>
 </head>
 
   </head>

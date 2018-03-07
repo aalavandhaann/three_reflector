@@ -5,7 +5,6 @@
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
-
     <script src="./GroundSceneReflector.js"></script>
     <script src="./aframe-mirror.js"></script>
 </head>
@@ -25,14 +24,28 @@
           enableZoom:true;
           enablePan:false;
           ">
+          <a-entity cursor="fuse: false; fuseTimeout: 1;rayOrigin:mouse"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat; visible:false">
+          </a-entity>
+
       </a-entity>
 
       <a-entity id="target" position="0 1 0">
-          <a-box id="box" position="-1 -0.25 1" rotation="0 0 0" color="#4CC3D9"></a-box>
-          <a-sphere id="sphere" position="0 0 -1" radius="1" color="#EF2D5E"></a-sphere>
-          <a-cylinder id="cylinder" position="1 0 1" radius="1" height="1" rotation="0 0 0" color="#FFC65D"></a-cylinder>          
+          <a-box id="box" position="-1 -0.25 1" rotation="0 0 0" color="#4CC3D9">
+            <a-animation dur="2000" direction="alternate" attribute="rotation" to="0 360 0" repeat="indefinite" yoyo="true" easing="ease"/>
+          </a-box>
+          <a-sphere id="sphere" position="0 0 -1" radius="1" color="#EF2D5E">
+              <a-animation dur="2000" direction="alternate" attribute="position" to="0 3 -1" repeat="indefinite" yoyo="true" easing="ease"/>
+          </a-sphere>
+          <a-cylinder id="cylinder" position="1 0 1" radius="1" height="1" rotation="0 0 0" color="#FFC65D">
+              <a-animation dur="2000" direction="alternate" attribute="rotation" to="45 0 0" repeat="indefinite" yoyo="true" easing="ease"/>
+          </a-cylinder>          
       </a-entity> 
       <a-plane position="0 0 0" rotation="-90 0 0" width=20 height=20 aframe-mirror="color:#848485;intensity:0.4;textureWidth:2048;textureHeight:2048;"></a-plane>
     </a-scene>
   </body>
 </html>
+
+

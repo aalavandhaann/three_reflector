@@ -60,10 +60,10 @@ To use this in threejs is as simple as creating an instance of GroundSceneReflec
 ```
 var gscenereflector = Ashok.GroundSceneReflector(mirrorObj, renderer, scene, data);
 ```
-```mirrorObj``` - The mesh to be given the reflector material
-```renderer``` - Pointer to the renderer instance
-```scene``` - Pointer to the scene instance
-```data``` - An object with the named properties and values as mentioned in the above table
+- ```mirrorObj``` - The mesh to be given the reflector material
+- ```renderer``` - Pointer to the renderer instance
+- ```scene``` - Pointer to the scene instance
+- ```data``` - An object with the named properties and values as mentioned in the above table
 
 
 

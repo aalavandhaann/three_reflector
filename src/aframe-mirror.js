@@ -22,6 +22,7 @@ AFRAME.registerComponent('aframe-mirror',
 	    textureHeight: {default: 512},
 	    color: {default: new THREE.Color(0x7F7F7F)},
 	    intensity: {default: 1.0},
+	    blendIntensity: {default: 0.5},
 	},
 	init: function () 
 	{

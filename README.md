@@ -54,3 +54,21 @@ A simple utility to make a mesh reflect its sorroundings. This can be used in th
   </body>
 </html>
 ```
+### THREE.JS example
+To use this in threejs is as simple as creating an instance of GroundSceneReflection with the following parameters
+
+```
+var gscenereflector = Ashok.GroundSceneReflector(mirrorObj, renderer, scene, data);
+```
+```mirrorObj``` - The mesh to be given the reflector material
+```renderer``` - Pointer to the renderer instance
+```scene``` - Pointer to the scene instance
+```data``` - An object with the named properties and values as mentioned in the above table
+
+
+
+
+
+
+
+

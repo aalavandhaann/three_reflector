@@ -10,6 +10,16 @@ A simple utility to make a mesh reflect its sorroundings. This can be used in th
 ### Installation via npm
 ```npm install three-reflector2 ```
 
+### Using with threejs and es6 example
+```
+import {Mesh, PlaneGeometry, MeshBasicMaterial, DoubleSide} from 'three';
+import {GroundSceneReflector} from 'three-reflector2';
+
+var ground = new Mesh(new PlaneGeometry(10000, 10000, 10), new MeshBasicMaterial({color: 0xEAEAEA, side: DoubleSide}));
+var reflector = new GroundSceneReflector(ground, renderer, scene,{textureOne:'pathtotextureone.png', textureTwo:'pathtotexturetwo.png', wrapOne:{x:10, y:10}, wrapTwo:{x:1, y:1}, intensity: 0.5});
+scene.add(ground);
+```
+
 ### API
 
 | Property   | Description | Default Value |
@@ -23,7 +33,7 @@ A simple utility to make a mesh reflect its sorroundings. This can be used in th
 | wrapTwo | Vector2 – The wrap repeat value for second texture image. Ignored if no textures are used.| {x:1, y:1}} |
 | invertedUV | Boolean – For models exported from Blender or tools with Z-Up, this is an ugly hack to invert the Y-coordinates of the UV map.| False |
 
-### Example
+### A-Frame Example
 ```
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,5 @@
 import {UniformsUtils, UniformsLib, ShaderChunk} from 'three';
-import {Plane, Vector3, Vector4, Matrix4, PerspectiveCamera, WebGLRenderTarget, Math, LinearFilter, RGBAFormat} from 'three';
+import {Plane, Vector3, Vector4, Matrix4, PerspectiveCamera, WebGLRenderTarget, Math as TMath, LinearFilter, RGBAFormat} from 'three';
 import {ShaderMaterial, DoubleSide, Color, TextureLoader, RepeatWrapping, } from 'three';
 
 
@@ -209,7 +209,7 @@ class GroundSceneReflector
 	    var renderTarget = new WebGLRenderTarget(this.data.textureWidth, this.data.textureHeight, {minFilter: LinearFilter, magFilter: LinearFilter, format: RGBAFormat, } );
 
 
-	    if ( ! Math.isPowerOfTwo( this.data.textureWidth ) || ! Math.isPowerOfTwo( this.data.textureHeight ) ) 
+	    if ( ! TMath.isPowerOfTwo( this.data.textureWidth ) || ! TMath.isPowerOfTwo( this.data.textureHeight ) ) 
 	    {
 			renderTarget.texture.generateMipmaps = false;
 		}
@@ -389,4 +389,5 @@ class GroundSceneReflector
 //             '}',
 // 'gl_FragColor = mix(gl_FragColor, vec4(c, 1.0), 1.0);',
 
+//module.exports = {ReflectorShader, GroundSceneReflector};
 export {ReflectorShader, GroundSceneReflector};

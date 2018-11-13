@@ -1,6 +1,6 @@
 {
   "name": "three-reflector2",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "three.js GLTFLoader wrapped as a module for easy importing",
   "main": "index.js",
   "homepage": "https://github.com/aalavandhaann/three_reflector",
@@ -22,6 +22,9 @@
   "dependencies": {
     "three": "^0.96.0"
   },
+  "peerDependencies": {
+	    "three": "^0.96.0"
+	  },
   "bugs": {
     "url": "https://github.com/aalavandhaann/three_reflector/issues"
   },

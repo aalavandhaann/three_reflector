@@ -2,6 +2,12 @@
 
 A simple utility to make a mesh reflect its sorroundings. This can be used in three.js as well as as an aframe component. This utility can be used with a color, or one texture image, or two texture images. USeful in a scenario to reflect the ground with the scene. This shader is an extension of threejs mirror example. 
 
+[Example 1](https://aalavandhaann.github.io/three_reflector/examples/basic.html)
+[Example 2](https://aalavandhaann.github.io/three_reflector/examples/basic_animated.html)
+[Example 3](https://aalavandhaann.github.io/three_reflector/examples/onetexture.html)
+
+
+
 ### API
 
 | Property   | Description | Default Value |

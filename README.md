@@ -5,8 +5,10 @@ A simple utility to make a mesh reflect its sorroundings. This can be used in th
 [Example 1](https://aalavandhaann.github.io/three_reflector/examples/basic.html)
 [Example 2](https://aalavandhaann.github.io/three_reflector/examples/basic_animated.html)
 [Example 3](https://aalavandhaann.github.io/three_reflector/examples/onetexture.html)
+[Example 4](https://aalavandhaann.github.io/blueprint-js/build)
 
-
+### Installation via npm
+```npm install three-reflector2 ```
 
 ### API
 

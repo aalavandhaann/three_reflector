@@ -75,6 +75,7 @@ Ashok.GroundSceneReflector = function(meshobject, renderer, scene, data)
 		});
 
 		material.uniforms.intensity.value = this.data.intensity;
+		material.uniforms.blendIntensity.value = this.data.blendIntensity;
 		material.uniforms.tDiffuse.value  = renderTarget.texture;
 		material.uniforms.color.value = new THREE.Color(this.data.color);
 		material.uniforms.invertedUV.value = this.data.invertedUV;
@@ -258,6 +259,11 @@ Ashok.GroundSceneReflector.ReflectorShader =
 			type: 'f',
 			value: 0.5
 		},
+		'blendIntensity': 
+		{
+			type: 'f',
+			value: 0.5
+		},
 		'tOneWrapX': 
 		{
 			type: 'f',
@@ -343,6 +349,7 @@ Ashok.GroundSceneReflector.ReflectorShader =
       '//The wrap repeat x and y for texture two',
       'uniform float tTwoWrapX;',
       'uniform float tTwoWrapY;',
+      'uniform float blendIntensity;',
       '//The textures themselves',
       'uniform sampler2D tOne;',
       'uniform sampler2D tSec;',
@@ -376,7 +383,7 @@ Ashok.GroundSceneReflector.ReflectorShader =
             	'Ca = texture2D(tOne, vec2(vUv[0] * tOneWrapX, vUv[1] * tOneWrapY));',
         		'Cb = texture2D(tSec, vec2(vUv[0] * tTwoWrapY, vUv[1] * tTwoWrapY));',
                 
-                'tcolors = (Ca.rgb * 0.5) + (Cb.rgb * 0.5);',
+                'tcolors = (Ca.rgb * blendIntensity) + (Cb.rgb * (1.0 - blendIntensity));',
                 'c = (reflection.rgb * (reflection.a * intensity)) + (tcolors.rgb * (1.0 - (reflection.a * intensity)));',
             '}',
             'else if(tOneFlag && !tTwoFlag)',
@@ -391,7 +398,7 @@ Ashok.GroundSceneReflector.ReflectorShader =
                 'tcolors = (Cb.rgb * 1.0);',
                 'c = (reflection.rgb * (reflection.a * intensity)) + (tcolors.rgb * (1.0 - (reflection.a * intensity)));',
             '}',
-            'gl_FragColor += vec4(c, 1.0);',
+            'gl_FragColor = vec4(c, 1.0);',
             THREE.ShaderChunk[ "fog_fragment" ],
       '}',
 	].join( '\n' ),
@@ -403,3 +410,4 @@ Ashok.GroundSceneReflector.ReflectorShader =
 //               'reflection.a = 0.0;',
 //             '}',
 // 'gl_FragColor = mix(gl_FragColor, vec4(c, 1.0), 1.0);',
+// 'c = (reflection.rgb * (reflection.a * intensity)) + (tcolors.rgb * (1.0 - (reflection.a * intensity)));',

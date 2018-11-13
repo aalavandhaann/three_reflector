@@ -2,12 +2,19 @@
 
 A simple utility to make a mesh reflect its sorroundings. This can be used in three.js as well as as an aframe component. This utility can be used with a color, or one texture image, or two texture images. USeful in a scenario to reflect the ground with the scene. This shader is an extension of threejs mirror example. 
 
+[Example 1](https://aalavandhaann.github.io/three_reflector/examples/basic.html)
+[Example 2](https://aalavandhaann.github.io/three_reflector/examples/basic_animated.html)
+[Example 3](https://aalavandhaann.github.io/three_reflector/examples/onetexture.html)
+
+
+
 ### API
 
 | Property   | Description | Default Value |
 | ---------- | ----------- | ------------- |
 | color | String – Color of the mesh without textures  | #848485
 | intensity | Number – A value between 0.0 to 1.0 that controls the intensity of the reflection. 0 implies no reflection and 1.0 implies a mirror| 0.5 |
+| blendIntensity | Number – A value between 0.0 to 1.0 that controls the blendIntensity between the two textures if given| 0.5 |
 | textureWidth | Number – The width of texture created with scene reflection| 256 |
 | textureHeight | Number – The height of texture created with scene reflection| 256 |
 | wrapOne | Vector2 – The wrap repeat value for the first texture image. Ignored if no textures are used.| {x:1, y:1}} |
@@ -53,3 +60,21 @@ A simple utility to make a mesh reflect its sorroundings. This can be used in th
   </body>
 </html>
 ```
+### THREE.JS example
+To use this in threejs is as simple as creating an instance of GroundSceneReflection with the following parameters
+
+```
+var gscenereflector = Ashok.GroundSceneReflector(mirrorObj, renderer, scene, data);
+```
+- ```mirrorObj``` - The mesh to be given the reflector material
+- ```renderer``` - Pointer to the renderer instance
+- ```scene``` - Pointer to the scene instance
+- ```data``` - An object with the named properties and values as mentioned in the above table
+
+
+
+
+
+
+
+

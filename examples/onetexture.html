@@ -5,8 +5,8 @@
     <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/v0.1.14/dist/aframe-orbit-controls-component.min.js"></script>
     <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
-    <script src="./GroundSceneReflector.js"></script>
-    <script src="./aframe-mirror.js"></script>
+    <script src="https://aalavandhaann.github.io/three_reflector/src/GroundSceneReflector.js"></script>
+    <script src="https://aalavandhaann.github.io/three_reflector/src/aframe-mirror.js"></script>
 </head>
 
   </head>
@@ -30,7 +30,7 @@
           <a-box id="box" position="-1 -0.25 1" rotation="0 0 0" color="#4CC3D9">
             <a-animation dur="2000" direction="alternate" attribute="rotation" to="360 360 360" repeat="indefinite" yoyo="true" easing="ease"/>
           </a-box>
-          <a-sphere id="sphere" position="0 0 -1" radius="1" color="#EF2D5E" aframe-mirror="intensity:0.5;textureWidth:2048;textureHeight:2048;textureOne:./textures/earthmap1k.jpg;invertedUV:false; wrapOne:">
+          <a-sphere id="sphere" position="0 0 -1" radius="1" color="#EF2D5E" aframe-mirror="intensity:0.5;textureWidth:2048;textureHeight:2048;textureOne:https://aalavandhaann.github.io/three_reflector/examples/textures/earthmap1k.jpg;invertedUV:false; wrapOne:">
               <a-animation dur="2000" direction="alternate" attribute="position" to="0 3 -1" repeat="indefinite" yoyo="true" easing="ease"/>
           </a-sphere>
           <a-cylinder id="cylinder" position="1 0 1" radius="1" height="1" rotation="0 0 0" color="#FFC65D">

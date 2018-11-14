@@ -1,7 +1,7 @@
 {
   "name": "three-reflector2",
   "version": "0.0.4",
-  "description": "three.js GLTFLoader wrapped as a module for easy importing",
+  "description": "Reflection of environment on any item in the scene",
   "main": "index.js",
   "homepage": "https://github.com/aalavandhaann/three_reflector",
   "repository": {

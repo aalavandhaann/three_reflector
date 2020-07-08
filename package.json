@@ -1,38 +1,38 @@
 {
-  "name": "three-reflector2",
-  "version": "0.0.5",
-  "description": "Reflection of environment on any item in the scene",
-  "main": "index.js",
-  "homepage": "https://github.com/aalavandhaann/three_reflector",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aalavandhaann/three_reflector.git"
-  },
-  "author": "#0K Srinivasan <ashok.srinivasan2002@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "keywords": [
-    "three",
-    "three.js",
-    "loader",
-    "webgl",
-    "es6",
-    "reflector"
-  ],
-  "dependencies": {
-    "three": "^0.96.0"
-  },
-  "peerDependencies": {
-	    "three": "^0.96.0"
-	  },
-  "bugs": {
-    "url": "https://github.com/aalavandhaann/three_reflector/issues"
-  },
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {}
+    "name": "three-reflector2",
+    "version": "0.0.5",
+    "description": "Reflection of environment on any item in the scene",
+    "main": "index.js",
+    "homepage": "https://github.com/aalavandhaann/three_reflector",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aalavandhaann/three_reflector.git"
+    },
+    "author": "#0K Srinivasan <ashok.srinivasan2002@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "keywords": [
+        "three",
+        "three.js",
+        "loader",
+        "webgl",
+        "es6",
+        "reflector"
+    ],
+    "dependencies": {
+        "three": "^0.118.3"
+    },
+    "peerDependencies": {
+        "three": "^0.96.0"
+    },
+    "bugs": {
+        "url": "https://github.com/aalavandhaann/three_reflector/issues"
+    },
+    "directories": {
+        "example": "examples"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {}
 }

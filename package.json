@@ -23,7 +23,7 @@
         "three": "^0.118.3"
     },
     "peerDependencies": {
-        "three": "^0.96.0"
+        "three": "^0.118.3"
     },
     "bugs": {
         "url": "https://github.com/aalavandhaann/three_reflector/issues"

@@ -20,10 +20,10 @@
         "reflector"
     ],
     "dependencies": {
-        "three": "^0.118.3"
+        "three": "^0.125.0"
     },
     "peerDependencies": {
-        "three": "^0.118.3"
+        "three": "^0.125.0"
     },
     "bugs": {
         "url": "https://github.com/aalavandhaann/three_reflector/issues"
